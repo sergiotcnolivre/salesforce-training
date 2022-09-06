@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex04</title>
+    </head>
+    <body>
+    <style>
+        .child1 {
+            background-color: #000;
+            color: #fff;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .child2 {
+            background-color: red;
+            color: white;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .btn {
+            position: absolute;
+            top: 320px;
+            left: 0
+        }
+    </style>
+        <!-- Move one DIV element inside another using jQuery -->
+
+
+        <div class="main">
+            <div class="child1">Div 1</div>
+            <div class="child2">Div 2</div>
+        </div>
+
+        <button class="btn">Click here!</button>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+        <script>
+            $(".btn").on("click", function () {
+                    $(".child2").slideToggle()
+            });
+        </script>
+    </body>
+</html>

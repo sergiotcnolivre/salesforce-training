@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex06</title>
+    </head>
+    <body>
+        <!-- Distinguish between left and right mouse click with jQuery -->
+
+        <button id="btn">Click here</button>
+
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+        <script>
+            $('#btn').mousedown(function (event) {
+                switch (event.which) {
+                    case 1:
+                        alert('Left Mouse button pressed.');
+                        break;
+                    case 2:
+                        alert('Middle Mouse button pressed.');
+                        break;
+                    case 3:
+                        alert('Right Mouse button pressed.');
+                        break;
+                    default:
+                        alert('You have a strange Mouse!');
+                }
+            });
+        </script>
+    </body>
+</html>

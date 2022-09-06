@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex02</title>
+    </head>
+    <body>
+        <!--Disable/enable the form submit button -->
+
+
+        <form action="#" method="post">
+            <input type="text" name="name" id="namw" placeholder="Name">
+            <input type="password" name="pass" id="pass" placeholder="Password">
+            <input id="accept" name="accept" type="checkbox" value="y">I accept<br>
+            <button type="submit" id="sbmt" disabled>Login</button>
+        </form>
+
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    
+        <script>
+            $('#accept').click(function () {
+                if ($('#sbmt').is(':disabled')) {
+                    $('#sbmt').removeAttr('disabled');
+                } else {
+                    $('#sbmt').attr('disabled', 'disabled');
+                }
+            });
+        </script>
+    </body>
+</html>

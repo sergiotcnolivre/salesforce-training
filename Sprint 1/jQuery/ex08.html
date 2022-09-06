@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex08</title>
+    </head>
+    <body>
+        <!-- Detect tab pressed button, check if tab button is pressed and the focused element is link, then underline it, if focused element is image, outline it -->
+
+        <input type="text" id="foo" placeholder="Select me and press tab" />
+        <input type="text" id="detect" />
+
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+        <script>
+            $(window).keyup(function (e) {
+                var code = (e.keyCode ? e.keyCode : e.which);
+                if (code == 9 && $('#detect:focus').length) {
+                    alert('I was tabbed!');
+                }
+            });
+        </script>
+    </body>
+</html>

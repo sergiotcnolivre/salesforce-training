@@ -5,7 +5,6 @@ function removeDuplicates(num) {
       len=num.length,
       out=[],
       obj={};
- 
   for (x=0; x<len; x++) {
     obj[num[x]]=0;
   }

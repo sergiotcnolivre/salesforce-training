@@ -2,17 +2,12 @@
 
 
 let mainArr = ['grape']
-arr1 = ['banana', 'apple']
-arr2 = ['pineapple']
-arr3 = ['orange']
+let arr1 = ['banana', 'apple']
+let arr2 = ['pineapple']
+let arr3 = ['orange']
+let arrFinal
 
-function joinArrays(mainArr, arr1, arr2, arr3) {
-    for (let index = 0; index < 3; index++) {
-        
-        mainArr.concat(arr2)
-        console.log(mainArr)
-        
-    }
+for (let i = 0; i < 4; i++) {
+    arrFinal += mainArr.concat(i)
+    console.log(arrFinal)
 }
-
-joinArrays(arr1, arr2, arr3)

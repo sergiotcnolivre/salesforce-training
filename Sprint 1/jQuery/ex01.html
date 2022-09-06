@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01</title>
+</head>
+<body>
+<!-- Test if jQuery is loaded  -->
+
+
+<button>Click me!</button>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script>
+
+    $("button").bind("click", function () {
+        $("<div>This is a click Event</div>").appendTo("body");
+    });
+
+    $("button").bind("dblclick", function () {
+        $("<div>This is a double-click Event</div>").appendTo("body");
+    });
+</script>
+</body>
+</html>
